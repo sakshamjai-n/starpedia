@@ -1,0 +1,297 @@
+* {
+    scroll-behavior: smooth;
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-attachment: fixed;
+    background-image: url(assets/bgg.jpg);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.m {
+    margin: 8px;
+}
+.container {
+    font-family: four;
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04), transparent), 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04), transparent),
+        rgba(0, 0, 0, 0.5); 
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    background-size: 100% 50%, 50% 100%, 100% 100%;
+    background-position: top left, top left, top left;
+    background-repeat: no-repeat;
+    z-index: 5;
+ 
+}
+@font-face {
+    font-family: title;
+    src: url(fonts/title.otf);
+}
+@font-face {
+    font-family: one;
+    src: url(fonts/one.ttf);
+}
+@font-face {
+    font-family: two;
+    src: url(fonts/two.ttf);
+}
+@font-face {
+    font-family: three;
+    src: url(fonts/three.ttf);
+}
+@font-face {
+    font-family: four;
+    src: url(fonts/four.ttf);
+}
+@font-face {
+    font-family: five;
+    src: url(fonts/five.ttf);
+}
+.nav {
+    padding: 4px;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07), transparent), 
+        linear-gradient(to right, rgba(255, 255, 255, 0.07), transparent),
+        rgba(0, 0, 0, 0.35); 
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    background-size: 100% 50%, 50% 100%, 100% 100%;
+    background-position: top left, top left, top left;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    z-index: 10;
+    height: 55px;
+    align-items: center;
+}
+.nav a {
+    font-family: three;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+}
+.nav a:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    width: 0;
+    left:0;
+    bottom: -10px;
+    transition: ease-out 0.3s;
+}
+.nav a:hover:after {
+    width: 100%;
+}
+.button {
+    display: inline;
+}
+.button {
+    text-decoration: none;
+}
+.nav,button a:link {
+    color: white;
+}
+.nav,button a:visited {
+    color: white;
+}
+.nav,button a:hover  {
+    color: white;
+}
+.nav,button a:active {
+    color:white
+}
+.c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titletext {
+    color: white;
+    font-family: two;
+    font-size: 50px; 
+    text-shadow: 0px 0px 5px black ;
+}
+dt {
+    color: white;
+    font-family: three;
+    font-size: 33px; 
+    text-shadow: 0px 0px 5px black ;
+}
+.text {
+    color: white;
+    font-family: four;
+    font-size: 20px;
+    text-align: center; 
+}
+dd {
+    color: white;
+    font-family: four;
+    font-size: 20px;
+}
+.ctext {
+    color: white;
+    font-family: four;
+    font-size: 20px;
+    list-style-type: none;
+    line-height: 40px;
+}
+.parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav li {
+    margin-right: 105px;
+    display: inline;
+}
+button {
+    position: relative;
+    height: 55px;
+    width: 130px;
+    border: none;
+    outline: none;
+    color: white;
+    background: rgba(8.7, 8.7, 8.7, 0.9);
+    cursor: pointer;
+    border-radius: 35px;
+    font-size: 18px;
+    font-family: three;
+}
+button:before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: 35px;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    background-size: 400%;
+    transition: opacity 0.3s ease-in-out;
+    animation: animate 20s linear infinite;
+  }
+  button:hover:before {
+    opacity: 1;
+  }
+  button:hover:active {
+    background: none;
+  }
+  button:hover:active:before {
+    filter: blur(2px);
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+.footer {
+    font-family: four;
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.01), transparent), 
+        linear-gradient(to right, rgba(255, 255, 255, 0.01), transparent),
+        rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(5px);
+    border-top: 2px solid rgba(255, 255, 255, 0.01);
+    border-left: 2px solid rgba(255, 255, 255, 0.01);
+    background-size: 100% 50%, 50% 100%, 100% 100%;
+    background-position: top left, top left, top left;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+img {
+    -webkit-user-drag: none;
+}
+.dwarf {
+    display: flex;
+    justify-content: center;
+}
+.ssscale {
+    font-family: four;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04), transparent), 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04), transparent),
+        rgba(0, 0, 0, 0.9); 
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    background-size: 100% 50%, 50% 100%, 100% 100%;
+    background-position: top left, top left, top left;
+    background-repeat: no-repeat;
+    z-index: 5;
+    width: fit-content;
+    height: fit-content;
+}
+.child {
+    height: 590px;
+    width: 300px;
+    font-family: four;
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04), transparent), 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04), transparent),
+        rgba(0, 0, 0, 0.5); 
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    background-size: 100% 50%, 50% 100%, 100% 100%;
+    background-position: top left, top left, top left;
+    background-repeat: no-repeat;
+    z-index: 5;
+    margin-right:5px;
+}
+.cdtext {
+    color: white;
+    font-family: four;
+    font-size: 16px;
+    list-style-type: none;
+    line-height: 25px;
+}
